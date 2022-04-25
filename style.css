@@ -2,3 +2,51 @@
   margin: 0;
   padding: 0;
 }
+
+.Grid {
+  display: grid;
+  height: 100vh;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  grid-template-rows: auto 1fr auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 1.5em;
+  align-items: center;
+  color: blue;
+}
+main {
+  background: url(Micro.png);
+  background-size: cover;
+  background-position: center;
+}
+header p:nth-of-type(2) {
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: brown;
+}
+footer {
+  font-size: larger;
+  font-weight: bolder;
+}
+main h1 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: aliceblue;
+  font-size: 3em;
+  animation: moving 5s infinite alternate linear;
+}
+@keyframes moving {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(80vh);
+  }
+}
+footer span {
+  color: blueviolet;
+}
